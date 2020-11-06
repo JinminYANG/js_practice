@@ -1,49 +1,50 @@
-// 2. 좌표 계산 패쓰 시ㅡ발
+// 2. 좌표 계산 모르겠다.
 
 function solution(lands, wells, point) {
-    let rtn = false;
-    let X1 = 0, X2 = 1, X3 = 2, X4 = 3;
+    let X1 = 0, Y1 = 1, X2 = 2, Y2 = 3;
 
-    function left(r) {
+    function left(r) {      // 사각형 r의 왼쪽 경계 좌표
         return Math.min(r[X1], r[X2]);
     }
 
-    function right(r) {
+    function right(r) {     // 사각형 r의 오른쪽 경계좌표
         return Math.max(r[X1], r[X2]);
     }
 
-    function top(r) {
+    function top(r) {       // 사각형 r의 위쪽 경계좌표
         return Math.min(r[Y1], r[Y2]);
     }
 
-    function bottom(r) {
+    function bottom(r) {    // 사각형 r의 아래쪽 경계좌표
         return Math.max(r[Y1], r[Y2]);
     }
 
-    function overlap1(rect1, rect2) {
-        if (right(rect1) <= left(rect2) || right(rect2) <= left(r1)) {
-            rtn = false;
+    function overlap1(rect1, rect2) {       // 두 사각형 rect1, rect2가 겹치는가? (경계선이 닿는 것은 겹치는 것이 아님)
+        if (right(rect1) <= left(rect2) || right(rect2) <= left(rect1)) {
+            console.log('false');
+            return false;
         }
         if (bottom(rect1) <= top(rect2) || bottom(rect2) <= top(rect1)) {
-            rtn = false;
+            console.log('false');
+            return false;
         }
-        rtn = true;
+        console.log('true');
+        return true;
     }
 
-    function overlap2(rects, r) {
-        for (let i = 0; i < rects.length-1; i++) {
-            if (overlap(i, r)) {
-                rtn = true;
+    function overlap2(rects, r) {           // 사각형 목록 rects의 사각형 중에서, 사각형 r과 겹치는 것이 있는가?
+        for (let i = 0; i < rects.length; i++) {
+            if (overlap1(rects[i], r)) {
+                console.log('true');
+                return true;
             }
         }
-        rtn = false;
+        console.log('false');
+        return false;
     }
 
-    rtn = overlap1(lands, point) == false && overlap1(wells, point) == true;
-
-    // console.log(rtn)
-    return rtn;
+    return overlap2(lands, point) == false && overlap2(wells, point) == true;
 }
 
 solution([[10, 0, 30, 5], [0, 30, 20, 50], [30, 30, 40, 40]], [[15, 15, 25, 25], [40, 10, 50, 20]], [10, 10, 30, 30]);
-// solution('hi', '');
+// solution([[0, 0, 20, 10], [10, 20, 20, 40], [30, 0, 50, 20]], [[20, 40, 30, 50], [30, 20, 50, 30]], [20, 30, 30, 40]);
