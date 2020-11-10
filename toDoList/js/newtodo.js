@@ -5,17 +5,6 @@ let toDoOrderList = register.querySelector("input[type='radio']");
 
 let TODOS_LS = [];
 
-var oReq = new XMLHttpRequest();
-oReq.addEventListener("load", function () {
-    alert(this.responseText);
-});
-oReq.open("POST", "/todo");
-oReq.send("helloworld!");
-
-var AJAXSubmit = (function(){
-    console.log("hi");
-});
-
 function addStudy(study) {
     const leadStudy = study;
     console.log(leadStudy);
@@ -42,11 +31,27 @@ function handleSubmit(event) {
     TODOS_LS.push(toDoWhat.value, toDoWho.value, toDoOrderList);
 
     addStudy(TODOS_LS);
+
+    // 서버에 요청하는 부분
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", function () {
+        // alert(this.responseText);
+        alert(TODOS_LS);
+    });
+    oReq.open("POST", "/todo");
+    oReq.send(JSON.stringify(TODOS_LS));
+
+    var AJAXSubmit = (function () {
+        console.log("hi");
+    });
+    // 여기까지
 }
 
 function init() {
     // console.log("hello");
-    // register.addEventListener("submit", handleSubmit);
+    register.addEventListener("submit", handleSubmit);
+
+
 }
 
 init();
