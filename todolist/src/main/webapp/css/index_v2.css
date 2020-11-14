@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#wrap{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#title{
+	position: absolute;
+    transform: rotate(-30deg);
+    top: 60px;
+    color: rgb(5, 81, 115);
+}
+
+#register_button{
+	position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background-color: skyblue;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+#todo_container{
+	position: absolute;
+    width: 87.5%;
+    /* height: 100%; */
+    top: 150px;
+    right: 18px;
+}
+
+
+#todo_list_header{
+	width: 100%;
+	height: 60px;
+}
+#todo_list_header > article{
+	width: 31.11634%;
+	float : left;
+	height: 60px;
+    line-height: 60px;
+    background: rgb(5,81,115);
+    color: #ffffff;
+    margin-left : 10px;
+    box-sizing : border-box;
+    text-indent: 20px;
+    font-size : 20px;
+    font-weight: bold;
+}
+#todo_list_header > article:after{
+	display:block;
+	content:none;
+	clear:both;
+}
+#todo_list_header:after{
+	display:block;
+	content:none;
+	clear:both;
+}
+
+
+#todo_list_body{
+    position: relative;
+	width: 100%;
+	height: 1000px;
+}
+.todo_item_container{
+    position: relative;
+	width: 31.11634%;
+	float : left;
+	height : 100%;
+	margin-left : 1%;
+    box-sizing : border-box;
+}
+.todo_item_container > article{
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	background-color: skyblue;
+	box-sizing : border-box;
+	margin-top: 10px;    
+}
+.todo_item_container > article > .todo_item_header{
+	box-sizing : border-box;
+	padding: 15px 0 0 10px;
+	font-weight: bold;
+	font-size: 18px;
+}
+.todo_item_container > article >.todo_item_contents{
+	box-sizing : border-box;
+	padding: 8px 0 0 10px;
+	font-size: 14px;
+}
+.todo_item_container > article > .update_button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 25px;
+    height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

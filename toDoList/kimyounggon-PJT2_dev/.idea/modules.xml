@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/kimyounggon-PJT2_dev.iml" filepath="$PROJECT_DIR$/.idea/kimyounggon-PJT2_dev.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kimyounggon-PJT2_dev/todolist.iml" filepath="$PROJECT_DIR$/kimyounggon-PJT2_dev/todolist.iml" />
-    </modules>
-  </component>
-</project>
