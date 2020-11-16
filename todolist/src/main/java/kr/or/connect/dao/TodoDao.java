@@ -10,7 +10,7 @@ import java.util.List;
 public class TodoDao {
 	private final String DATABASE_URL = "jdbc:mysql://localhost:3306/todolist";
 	private final String DATABASE_USER = "user";
-	private final String DATABASE_PASSWORD = "aa7485";
+	private final String DATABASE_PASSWORD = "user";
 
 	private static final TodoDao SINGLETON_TODO_DAO = new TodoDao();
 

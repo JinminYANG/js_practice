@@ -25,18 +25,13 @@
         </section>
         <section id="todo_list_body">
             <section id="TODO" class="todo_item_container">
-                <%-- <c:forEach items="${todoList}" var="todo"> --%>
-<%--                     <article>
+                <c:forEach items="${todoList}" var="todo">
+                    <article>
                         <p class="todo_item_header">${todo.title}</p>
                         <p class="todo_item_contents">등록날짜:${todo.regDate}, ${todo.name}, 우선순위 ${todo.sequence}</p>
                         <button type="button" id="${todo.id}" class="update_button">→</button>
-                    </article> --%>
-                    <article>
-                        <p class="todo_item_header">자바스크립트</p>
-                        <p class="todo_item_contents">등록날짜:2020-11-14, 우선순위: 1</p>
-                        <button type="button" id="${todo.id}" class="update_button">→</button>
-                    </article>
-                <%-- </c:forEach> --%>
+                    </article> 
+                </c:forEach>
             </section>
             <section id="DOING" class="todo_item_container">
                 <c:forEach items="${doingList}" var="doing">
