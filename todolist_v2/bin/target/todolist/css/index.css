@@ -1,0 +1,84 @@
+@charset 'utf-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#wrap{
+    position: relative;
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+h1{
+    position: absolute;
+    transform: rotate(-30deg);
+    top: 60px;
+    color: rgb(5, 81, 115);
+}
+
+#newBtn{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background-color: skyblue;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+#mainVisual{
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    top: 150px;
+    right: 50px;
+}
+
+.list{
+    float: left;
+    width: 32.3%;
+    background: gray;
+    margin-left: 1%;
+}
+
+.list > .title{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-indent: 20px;
+    background: rgb(5,81,115);
+    color: #ffffff;
+}
+
+.study{
+    width: 100%;
+    height: 100px;
+    margin: 10px 0 10px 0;
+    background: skyblue;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+.study > .studyTitle{
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.study > span{
+    font-size: 13px;
+    color: rgb(5,81,115);
+}
+.study > button{
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid gray;
+}

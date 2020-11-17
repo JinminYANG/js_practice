@@ -1,0 +1,94 @@
+@charset 'utf-8';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#wrap{
+    position: relative;
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    /* background: gray; */
+}
+
+#register{
+    position: relative;
+    padding: 30px 0;
+    /* background: green; */
+    height: 80%;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#subject{
+    text-align: center;
+}
+
+#register ul{
+    position: relative;
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#register li{
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+#register label[name="question"]{
+    padding: 5px 0;
+    display: block;
+    color: #333333;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#register input[type=text]{
+    width: 100%;
+    height: 35px;
+    text-indent: 10px;
+    border: 3px solid #fff;
+    outline: none;
+}
+
+#register input[type=text]:focus {
+    border: 3px solid #8fbaee;
+}
+
+#register label[name="orl"]{
+    margin-right: 30px;
+}
+
+#register #prev{
+    position: absolute;
+    bottom: 30px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+
+#register #submit,
+#register #reset{
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    background: #1ea1eb;
+    border: none;
+    color: #fff;
+}
+#register #submit{
+    right: 110px;
+}
