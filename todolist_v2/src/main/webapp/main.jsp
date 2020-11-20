@@ -5,8 +5,8 @@
 <html>
 <head>
     <title>나의 해야할 일들</title>
-    <link rel="stylesheet" href="./css/index_v2.css?ver=1.1111111">
-    <script defer type="text/javascript" src="./js/main.js?ver=1.1111111"></script>
+    <link rel="stylesheet" href="./css/index_v2.css?ver=2.0">
+    <script defer type="text/javascript" src="./js/main_v2.js"></script>
 </head>
 <body>
 <div id="wrap">
@@ -34,7 +34,7 @@
                 <c:forEach items="${doingList}" var="doing">
                     <article>
                         <p class="todo_item_header">${doing.title}</p>
-                        <p class="todo_item_contents">등록날짜:${doing.regDate}, ${doing.name}, 우선순위 ${doing.sequence}</p>
+                        <p class="todo_item_contents">등록날짜:${doing.regDate}, ${doing.name}, 우선순위${doing.sequence}</p>
                         <button type="button" id="${doing.id}" class="update_button">→</button>
                     </article>
                 </c:forEach>
