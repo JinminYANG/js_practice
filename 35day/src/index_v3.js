@@ -10,43 +10,10 @@ let PENDING = [];
 const FINISHED_LIST = "FINISHED";
 let FINISHED = [];
 
-function conveyPending(event) {
-    event.preventDefault();
-    const button = event.target;
-    button.innerText = "↓";
-    const li = button.parentNode;
-    const ul = li.parentNode;
-    console.log(ul);
 
-    const taskObject = {
-        text: li.firstChild.innerText,
-        id: parseInt(li.id)
-    }
-    taskPendingList.appendChild(li);
-    PENDING.push(taskObject);
-    const cleanToFinishedTasks = FINISHED.filter(function (task) {
-        return task.id !== parseInt(li.id);
-    });
-    FINISHED = cleanToFinishedTasks;
-    saveTasks();
-}
-
-function conveyFinished(event) {
-    event.preventDefault();
-    const button = event.target;
-    button.innerText = "↑";
-    const li = button.parentNode;
-    const taskObject = {
-        text: li.firstChild.innerText,
-        id: parseInt(li.id)
-    }
-    taskFinishedList.appendChild(li);
-    FINISHED.push(taskObject);
-    const cleanToPendingTasks = PENDING.filter(function (task) {
-        return task.id !== parseInt(li.id);
-    });
-    PENDING = cleanToPendingTasks;
-    saveTasks();
+function saveTasks() {
+    localStorage.setItem(PENDING_LIST, JSON.stringify(PENDING));
+    localStorage.setItem(FINISHED_LIST, JSON.stringify(FINISHED));
 }
 
 function deletePendingTask(event) {
@@ -73,10 +40,6 @@ function deleteFinishedTask(event) {
     saveTasks();
 }
 
-function saveTasks() {
-    localStorage.setItem(PENDING_LIST, JSON.stringify(PENDING));
-    localStorage.setItem(FINISHED_LIST, JSON.stringify(FINISHED));
-}
 
 function paintPendingTasks(text, id) {
     const li = document.createElement("li");
