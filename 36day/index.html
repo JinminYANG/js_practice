@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+
+<body>
+<form id="game" oninput="numberCheck.value=numberChange.value">
+    <h1 id="title">Random Number Game</h1>
+
+    <h2 id="subject">Generate a number between 0 and <output name="numberCheck" for="number">10</output></h2>
+
+    <input type="range" id="numberChange" name="numberChange" min="0" max="200" value="" />
+    <span class="gameDescription">Guess the number: </span> <input type="number" id="inputNumber" min="0" value=""/> <button class="click">Play!</button>
+
+    <div class="gameResult">
+        <span></span>
+        <strong></strong>
+    </div>
+</form>
+<script src="src/index.js?ver=1.0"></script>
+</body>
+</html>
