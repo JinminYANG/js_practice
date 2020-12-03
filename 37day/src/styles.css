@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+}
+#calculator{
+    background: black;
+    color: #ffffff;
+    padding: 30px;
+    width: 500px;
+    text-align: center;
+}
+#resultValue{
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+    margin-right: 24px;
+    font-size: 30px;
+}
+button{
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: pointer;
+    background: #333333;
+    color: #ffffff;
+    font-size: 20px;
+}
+#resetButton{
+    background: #999999;
+}
+#addition,
+#subtraction,
+#multiplication,
+#division{
+    background: darkorange;
+}
+#zero{
+    width: 210px;
+}
