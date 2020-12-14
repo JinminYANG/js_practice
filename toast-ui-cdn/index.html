@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- Editor's Dependency Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"/>
+    <!-- Editor's Style -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"/>
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui-grid/v4.10.0/tui-grid.min.css">
+</head>
+<body>
+<div id="editor">
+
+</div>
+
+<!-- <div id="viewer">
+
+</div> -->
+<script src=" https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js "></script>
+<script>
+    /* eslint-disable no-unused-vars */
+    const content = [
+        '![image](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)',
+        '',
+        '# Heading 1',
+        '## Heading 2',
+        '### Heading 3',
+        '#### Heading 4',
+        '##### Heading 5',
+        '###### Heading 6',
+        '',
+        '**bold** *italic* ~~strikethrough~~',
+        '<span style="color:#e11d21;">Color Syntax</span>',
+        '[link](https://nhn.github.io/tui.editor/)',
+        '',
+        '---',
+        'horizontal line',
+        '***',
+        '',
+        '> block quote',
+        '>> block quote (2 depth)',
+        '>>> block quote (3 depth)',
+        '',
+        '* list',
+        '    * list indented',
+        '1. ordered',
+        '2. list',
+        '    1. ordered list',
+        '    2. indented',
+        '',
+        '- [ ] task',
+        '- [x] list completed',
+        '',
+        '`inline code`',
+        '',
+        '    code block',
+        '```js',
+        'console.log("fenced code block");',
+        '```',
+        '<pre>**HTML block**</pre>',
+        '',
+        '| table | head |',
+        '| ----  | ---- |',
+        '| table | body |'
+    ].join('\n');
+
+    const editor = new toastui.Editor({
+        el: document.querySelector('#editor'),
+        previewStyle: 'vertical',
+        initialEditType: "wysiwyg",
+        height: 'auto',
+        initialValue: content
+    });
+
+
+</script>
+
+<!-- <script src="https://uicdn.toast.com/editor/latest/toastui-editor-viewer.js">
+    const viewer = new Viewer({
+        el: document.querySelector('#viewer'),
+        height: '600px',
+        initialValue: '# hello'
+    });
+
+    viewer.getHtml();
+</script> -->
+</body>
+</html>
